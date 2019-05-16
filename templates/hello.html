@@ -1,0 +1,38 @@
+<!doctype html>
+
+<html>
+
+<head>
+  <title>My Flask App Page</title>
+</head>
+
+<body>
+
+  {% if myname %}
+    <p>Hello {{myname}}!</p>
+      <p>Let's keep in touch!</p>
+    	<div id="contact-form">
+    		<form method="post" action="/signup">
+          <label for="name">Your name:</label>
+          <input type="name" id="name" name="name" required="required">
+    			<label for="email">Your email address:</label>
+    			<input type="email" id="email" name="email" required="required">
+    			<input type="submit" value="Submit" id="submit-button">
+    		</form>
+
+        <form method="post" action="/weather">
+    			<label for="city">Give me weather in:</label>
+    			<input type="city" id="city" name="city" required="required">
+    			<input type="submit" value="Submit" id="submit-button">
+    		</form>
+    	</div>
+  {% else %}
+    <p>Hello anonymous person!</p>
+
+  {% endif %}
+
+
+
+</body>
+
+</html>
